@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
-import logo from "/erkab_logo.jpg";
+import logo from "/erkab_logo.png";
 import AboutUsDropdown from "./AboutUsDropdown";
 import { navItems } from "./NavItems";
 import { useState } from "react";
+import ServiceDropdown from "./ServiceDropdown";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Navbar = () => {
-  const [dropdown, setDropdown] = useState(false);
+  const [aboutDropdown, setAboutDropdown] = useState(false);
+  const [serviceDropdown, setServiceDropdown] = useState(false);
 
   return (
     <>
@@ -14,16 +17,36 @@ const Navbar = () => {
         <nav className="nav-links">
           <ul>
             {navItems.map((item) => {
+              if (item.title === "About Us") {
+                return (
+                  <li
+                    key={item.id}
+                    className="dropdown-list"
+                    onMouseEnter={() => setAboutDropdown(true)}
+                    onMouseLeave={() => setAboutDropdown(false)}
+                  >
+                    <Link to={item.path}>
+                      {item.title}
+                      <MdKeyboardArrowDown size={15} />
+                    </Link>
+                    {aboutDropdown && <AboutUsDropdown />}
+                  </li>
+                );
+              }
+
               if (item.title === "Services") {
                 return (
                   <li
                     key={item.id}
-                    className={item.cName}
-                    onMouseEnter={() => setDropdown(true)}
-                    onMouseLeave={() => setDropdown(false)}
+                    className="dropdown-list"
+                    onMouseEnter={() => setServiceDropdown(true)}
+                    onMouseLeave={() => setServiceDropdown(false)}
                   >
-                    <Link to={item.path}>{item.title}</Link>
-                    {dropdown && <AboutUsDropdown />}
+                    <Link to={item.path}>
+                      {item.title}
+                      <MdKeyboardArrowDown size={15} />
+                    </Link>
+                    {serviceDropdown && <ServiceDropdown />}
                   </li>
                 );
               }

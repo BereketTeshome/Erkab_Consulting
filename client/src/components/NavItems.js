@@ -8,25 +8,25 @@ export const navItems = [
   {
     id: 2,
     title: "About Us",
-    path: "/about",
+    path: "/overview",
     cName: "nav-item",
   },
   {
     id: 3,
     title: "Services",
-    path: "/services",
+    path: "/trainings",
     cName: "nav-item",
   },
   {
     id: 4,
-    title: "Portfolio",
-    path: "/portfolio",
+    title: "Pricing",
+    path: "/pricing",
     cName: "nav-item",
   },
   {
     id: 5,
-    title: "Contact Us",
-    path: "/contactus",
+    title: "Contact",
+    path: "/contact",
     cName: "nav-item",
   },
 ];
@@ -48,6 +48,21 @@ export const aboutDropdown = [
     id: 3,
     title: "Testimonials",
     path: "/testimonials",
+    cName: "submenu-item",
+  },
+];
+
+export const serviceDropdown = [
+  {
+    id: 1,
+    title: "Trainings",
+    path: "/trainings",
+    cName: "submenu-item",
+  },
+  {
+    id: 2,
+    title: "Solutions",
+    path: "/solutions",
     cName: "submenu-item",
   },
 ];
