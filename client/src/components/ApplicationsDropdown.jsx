@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { aboutDropdown } from "./NavItems";
+import { ApplicationsDropdown } from "./NavItems";
 
-const AboutUsDropdown = () => {
+const ApplicationDropdown = () => {
   const [drop, setDrop] = useState(false);
 
   return (
     <div className="dropdown-links">
       <div className="sub-dropdown">
         <ul onClick={() => setDrop(!drop)}>
-          {aboutDropdown.map((item) => (
+          {ApplicationsDropdown.map((item) => (
             <li key={item.id} className={item.cName}>
-              <Link to={item.path} className="dropped-link">
+              <Link to={item.path} target="_blank">
                 {item.title}
               </Link>
             </li>
@@ -22,4 +22,4 @@ const AboutUsDropdown = () => {
   );
 };
 
-export default AboutUsDropdown;
+export default ApplicationDropdown;

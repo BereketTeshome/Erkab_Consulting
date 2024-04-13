@@ -37,15 +37,52 @@ const Overview = () => {
           <br />
           <h1>Areas of Specialization</h1>
           <br />
-          Business development service: Erkab has a tailored made business
-          development service which is an array of interconnected end to end BDS
-          provisions. <br /> This service involves need assessment and gap
-          analysis for business companies and enterprises, tailoring business
-          development service based on gaps and needs, providing tailored
-          services and mentorship, coaching, advisory and follow up services.
+          <b>Business development service: </b> Erkab has a tailored made
+          business development service which is an array of interconnected end
+          to end BDS provisions. <br /> This service involves need assessment
+          and gap analysis for business companies and enterprises, tailoring
+          business development service based on gaps and needs, providing
+          tailored services and mentorship, coaching, advisory and follow up
+          services.
           <br />
           <br /> This business development service lasts for 2-6 months. So far
           MSMEs supported by NGOs and companies have got our services.
+        </p>
+        <br />
+        <p>
+          <b>Master Salesmanship training: </b> This training is the only
+          training package available from Erkab in Ethiopia. It is competence
+          and behavioral based hands on practical training with 13 master
+          salesmanship competences and 156 behaviors. This training is available
+          for sales representatives, sales persons, banking customer officers,
+          real estate agents etc.{" "}
+        </p>
+        <br />
+        <p>
+          <b>Corporate Entrepreneurship training: </b> This is a capacity
+          building training for corporations.
+        </p>
+        <br />
+        <p>
+          <b>Leadership training: </b> This training is a practical leadership
+          training that applies transformational leadership by using the DAC
+          model
+        </p>
+        <br />
+        <p>
+          <b>Emotional intelligent training: </b> This training has 2 types
+          based targets who are corporate managers and married &relationship
+          couples.
+        </p>
+        <br />
+        <p>
+          <strong>The 3rd Eye: </strong>
+          This is Erkab’s media product which is being broadcasted via you tube
+          and also it will start via television in the near future. (
+          <a href="https://t.me/OpenTheThirdEye" target="_blank">
+            <i>https://t.me/OpenTheThirdEye</i>
+          </a>
+          )
         </p>
         <br />
         <h1>Our Achievements so far</h1>

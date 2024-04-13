@@ -32,31 +32,31 @@ export const TeamsArray = [
 export const TrainingsArray = [
   {
     id: 1,
-    image: "/training-anotha-bg.jpg",
+    image: "/sales.jpg",
     title: "Master Salesmanship training",
     desc: "This training is the only training package available from Erkab in Ethiopia. It is competence and behavioral based hands on practical training with 13 master salesmanship competences and 156 behaviors. This training is available for sales representatives, sales persons, banking customer officers, real estate agents etc.  ",
   },
   {
     id: 2,
-    image: "/training-anotha-bg.jpg",
+    image: "/Entrepreneurship.jpg",
     title: "Entrepreneurship training",
     desc: "This training is a practical training which has 3 segments namely generate your business idea, design & model your business and expand your business",
   },
   {
     id: 3,
-    image: "/training-anotha-bg.jpg",
+    image: "/Corporate Entrepreneurship.png",
     title: "Corporate Entrepreneurship training",
     desc: "This is a capacity building training for corporations.  ",
   },
   {
     id: 4,
-    image: "/training-anotha-bg.jpg",
+    image: "/leadership.jpg",
     title: "Leadership training",
     desc: "This training is a practical leadership training that applies transformational leadership by using the DAC model",
   },
   {
     id: 5,
-    image: "/training-anotha-bg.jpg",
+    image: "/Emotional intelligent.jpg",
     title: "Emotional intelligent training",
     desc: "This training has 2 types based targets who are corporate managers and married &relationship couples. ",
   },

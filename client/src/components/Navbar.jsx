@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
-import logo from "/erkab_logo.png";
+import logo from "/logo.png";
 import AboutUsDropdown from "./AboutUsDropdown";
 import { navItems } from "./NavItems";
 import { useState } from "react";
 import ServiceDropdown from "./ServiceDropdown";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import ApplicationDropdown from "./ApplicationsDropdown";
 
 const Navbar = () => {
   const [aboutDropdown, setAboutDropdown] = useState(false);
   const [serviceDropdown, setServiceDropdown] = useState(false);
+  const [applicationsDropdown, setApplicationsDropdown] = useState(false);
 
   return (
     <>
@@ -47,6 +49,23 @@ const Navbar = () => {
                       <MdKeyboardArrowDown size={15} />
                     </Link>
                     {serviceDropdown && <ServiceDropdown />}
+                  </li>
+                );
+              }
+
+              if (item.title === "Applications") {
+                return (
+                  <li
+                    key={item.id}
+                    className="dropdown-list"
+                    onMouseEnter={() => setApplicationsDropdown(true)}
+                    onMouseLeave={() => setApplicationsDropdown(false)}
+                  >
+                    <Link to={item.path}>
+                      {item.title}
+                      <MdKeyboardArrowDown size={15} />
+                    </Link>
+                    {applicationsDropdown && <ApplicationDropdown />}
                   </li>
                 );
               }
