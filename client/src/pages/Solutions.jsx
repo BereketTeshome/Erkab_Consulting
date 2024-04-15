@@ -1,10 +1,10 @@
 import Navbar from "../components/Navbar";
-import training from "../../public/solutions.jpg";
-import design from "../../public/design.jpg";
-import life from "../../public/life_skill.jpg";
-import corporate from "../../public/corporate.png";
-import business from "../../public/business.png";
-import e_ship from "../../public/e-ship.jpg";
+import training from "/solutions.jpg";
+import design from "/design.jpg";
+import life from "/life_skill.jpg";
+import corporate from "/corporate.png";
+import business from "/business.png";
+import e_ship from "/e-ship.jpg";
 import { SolutionsArray } from "../constants/constant";
 import Footer from "../components/Footer";
 

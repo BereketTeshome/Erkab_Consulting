@@ -1,9 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contact from "./pages/Contact";
-import AboutUs from "./pages/AboutUs";
 import Home from "./pages/Home";
-import Services from "./pages/Services";
 import Overview from "./pages/Overview";
 import Testimonials from "./pages/Testimonials";
 import Teams from "./pages/Teams";
@@ -13,6 +11,8 @@ import Pricing from "./pages/Pricing";
 import BusinessOrganizationForm from "../forms/Business Organization";
 import IndividualTraining from "../forms/Individual Training";
 import BusinessDevelopmentService from "../forms/Business development service";
+import Partners from "./pages/Partners";
+import News from "./pages/News";
 
 function App() {
   return (
@@ -20,13 +20,13 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/about" element={<AboutUs />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/overview" element={<Overview />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/teams" element={<Teams />} />
+          <Route path="/partners" element={<Partners />} />
           <Route path="/trainings" element={<Training />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/trainingIndividual" element={<IndividualTraining />} />

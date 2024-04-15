@@ -1,5 +1,5 @@
 import Navbar from "../components/Navbar";
-import training from "../../public/training_bg.jpg";
+import training from "/training_bg.jpg";
 import { TrainingsArray } from "../constants/constant";
 
 const Training = () => {

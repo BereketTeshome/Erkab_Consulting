@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ApplicationsDropdown } from "./NavItems";
+import { ApplicationsDropdown } from "../constants/NavItems";
 
 const ApplicationDropdown = () => {
   const [drop, setDrop] = useState(false);

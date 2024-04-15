@@ -1,12 +1,6 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-// import mission from "/mission.png";
-// import eyosias from "../../public/Eyosias.jpg";
 import { TeamsArray } from "../constants/constant";
-// import yibeltal from "/Yibeltal.png"
-// import alemfire from "/Alemfire.png"
-// import dagim from "/Dagim.png"
-// import { TeamsArray } from "../constants/constant";
 
 const Teams = () => {
   return (

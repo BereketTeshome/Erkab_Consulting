@@ -77,12 +77,30 @@ const Overview = () => {
         <br />
         <p>
           <strong>The 3rd Eye: </strong>
-          This is Erkab’s media product which is being broadcasted via you tube
-          and also it will start via television in the near future. (
+          This is Erkab’s media product which is being broadcasted via Youtube
+          and also it will start via television in the near future in
+          partnership with Erkab consulting, Abay TV and EDI. <br />
           <a href="https://t.me/OpenTheThirdEye" target="_blank">
             <i>https://t.me/OpenTheThirdEye</i>
           </a>
-          )
+          <br />
+          <br />
+          <b>The 3rd Eye provide Events and advertisement services like:</b>
+          <div className="third-eye-services">
+            <p>
+              <br />
+              -Organizing bazars for MSMEs
+            </p>
+            <p>
+              <br />
+              -On the 3rd Eye TV show advertisement
+            </p>
+            <p>
+              <br />
+              -Door to door promotion of products
+            </p>{" "}
+          </div>
+          <br />
         </p>
         <br />
         <h1>Our Achievements so far</h1>

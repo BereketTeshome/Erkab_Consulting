@@ -53,15 +53,20 @@ body {
   align-items: center;
   justify-content: space-around;
   justify-content: flex-end;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .nav-links ul li a {
   color: white;
   text-decoration: none;
-  font-size: small;
+  font-size: 0.9rem;
   display: flex;
   padding: 27px 1px;
+}
+
+.arrowDown {
+  position: relative;
+  top: 2px;
 }
 
 .logo {
@@ -73,7 +78,7 @@ body {
   position: relative;
   width: 100%;
   text-align: center;
-  height: 20px;
+  /* height: 20px; */
 }
 
 .dropdown-links ul {
@@ -107,35 +112,6 @@ body {
   z-index: 2;
   overflow: hidden;
 }
-/* .dropped-link {
-  background-color: #002fff;
-  line-height: 7px;
-  margin: 0;
-  height: 2px;
-} */
-/* .nav-items li {
-  transition: 0.3s ease-in-out;
-  gap: 3rem;
-
-  cursor: pointer;
-}
-
-.nav-items:hover {
-  background: #68ae01;
-  cursor: pointer;
-} */
-
-/* .nav-items a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: #111;
-} */
-
-.dropdown-links.clicked {
-  display: none;
-}
 
 .overview {
   padding: 6% 10%;
@@ -153,6 +129,9 @@ body {
 .overview h1 {
   color: #333333c9;
 }
+.third-eye-services {
+  margin-left: 20px;
+}
 
 .underline {
   color: rgb(90, 163, 56);
@@ -160,6 +139,8 @@ body {
   height: 1px;
   width: 120px;
   display: flex;
+  position: relative;
+  top: 3px;
 }
 
 .overview-header {
@@ -385,7 +366,7 @@ body {
   margin-top: 100px;
   width: 100%;
   background-color: #ffffff85;
-  box-shadow: 1px 1px 20px -1px green;
+  box-shadow: 1px 1px 20px -1px blue;
   color: black;
   display: flex;
   align-items: center;
@@ -409,9 +390,11 @@ body {
 }
 
 .home-aboutus {
-  width: 90%;
   text-align: justify;
   font-size: 1.1rem;
+}
+.home-aboutus-p {
+  color: #555;
 }
 
 .home-aboutus h1 {
@@ -478,7 +461,7 @@ body {
 .solution-scroll {
   overflow: hidden;
   padding: 20px 0;
-  background: white;
+  background: #f8f7f7;
   white-space: nowrap;
   position: relative;
 }
@@ -495,12 +478,12 @@ body {
 
 .solution-scroll:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #f8f7f7);
 }
 
 .solution-scroll:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #f8f7f7);
 }
 
 .solution-scroll:hover .images-scroll {
@@ -510,7 +493,7 @@ body {
 .text-scroll {
   overflow: hidden;
   padding: 60px 0;
-  background: white;
+  background: #f8f7f7;
   white-space: nowrap;
   position: relative;
 }
@@ -527,12 +510,12 @@ body {
 
 .text-scroll:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #f8f7f7);
 }
 
 .text-scroll:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #f8f7f7);
 }
 
 .solution-scroll:hover .images-scroll {
@@ -671,6 +654,7 @@ h2 {
 }
 .contact-input {
   border-color: rgba(255, 166, 0, 0.425);
+  color: #444;
 }
 .contact_form button {
   border: none;
@@ -793,8 +777,8 @@ textarea {
 .service_head {
   background: linear-gradient(
     180deg,
-    rgba(255, 166, 0, 0.658),
-    rgba(157, 255, 0, 0.521)
+    rgb(255, 166, 0),
+    rgba(15, 97, 250, 0.808)
   );
   padding: 2rem;
   border-radius: 0 0 2rem 2rem;
@@ -847,6 +831,51 @@ textarea {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+}
+
+/* News Page */
+
+.news {
+  padding: 4% 6%;
+}
+.news h2 {
+  display: flex;
+  color: #2c2b2baf;
+  font-family: monospace;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.8rem;
+}
+
+.sub-news {
+  box-shadow: 2px 2px 5px -1px black;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  gap: 2.5rem;
+  padding: 15px;
+  margin-bottom: 45px;
+  transition: 0.4s all;
+  cursor: pointer;
+}
+
+.sub-news:hover {
+  scale: 1.01;
+}
+
+.sub-news p {
+  color: #555;
+  text-align: justify;
+}
+
+.sub-news div {
+  margin-top: 15px;
+}
+
+.sub-news img {
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px -1px black;
 }
 
 /* footer */

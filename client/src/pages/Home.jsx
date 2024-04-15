@@ -18,8 +18,8 @@ export default function Home() {
         <img src={webCover} alt="web cover image" className="web-cover-img" />
 
         <div className="home-aboutus">
-          <h1>Erkab Consulting PLC</h1>
-          <p>
+          <h1>Erkab Consulting PLC.</h1>
+          <p className="home-aboutus-p">
             Erkab is a professional consulting firm established in 2021 G.C. the
             shareholders have a more than 13 years of profound consulting
             experience. <br />
@@ -112,7 +112,7 @@ export default function Home() {
             <div style={{ marginTop: "60px" }}>
               <h1 className="popularh2">Get started with Erkab-Consulting</h1>
               <p>Subscribe and find super affordable trainings from us</p>
-              <a href="mailto:erkabconsulting@gmail.com">
+              <a href="mailto:erkabconsulting@gmail.com" target="_blank">
                 <button>Get Started</button>
               </a>
             </div>

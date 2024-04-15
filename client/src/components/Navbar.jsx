@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import logo from "../../public/logo1.jpg";
+import logo from "/logo1.jpg";
 import AboutUsDropdown from "./AboutUsDropdown";
-import { navItems } from "./NavItems";
+import { navItems } from "../constants/NavItems";
 import { useState } from "react";
 import ServiceDropdown from "./ServiceDropdown";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -29,7 +29,7 @@ const Navbar = () => {
                   >
                     <Link to={item.path}>
                       {item.title}
-                      <MdKeyboardArrowDown size={15} />
+                      <MdKeyboardArrowDown size={20} className="arrowDown" />
                     </Link>
                     {aboutDropdown && <AboutUsDropdown />}
                   </li>
@@ -46,7 +46,7 @@ const Navbar = () => {
                   >
                     <Link to={item.path}>
                       {item.title}
-                      <MdKeyboardArrowDown size={15} />
+                      <MdKeyboardArrowDown size={20} className="arrowDown" />
                     </Link>
                     {serviceDropdown && <ServiceDropdown />}
                   </li>
@@ -63,7 +63,7 @@ const Navbar = () => {
                   >
                     <Link to={item.path}>
                       {item.title}
-                      <MdKeyboardArrowDown size={15} />
+                      <MdKeyboardArrowDown size={20} className="arrowDown" />
                     </Link>
                     {applicationsDropdown && <ApplicationDropdown />}
                   </li>

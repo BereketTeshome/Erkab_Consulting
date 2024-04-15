@@ -25,12 +25,18 @@ export const navItems = [
   },
   {
     id: 5,
+    title: "News",
+    path: "/news",
+    cName: "nav-item",
+  },
+  {
+    id: 6,
     title: "Applications",
     path: "/trainingIndividual",
     cName: "nav-item",
   },
   {
-    id: 6,
+    id: 7,
     title: "Contact",
     path: "/contact",
     cName: "nav-item",
@@ -52,6 +58,12 @@ export const aboutDropdown = [
   },
   {
     id: 3,
+    title: "Our Partners",
+    path: "/partners",
+    cName: "submenu-item",
+  },
+  {
+    id: 4,
     title: "Testimonials",
     path: "/testimonials",
     cName: "submenu-item",
