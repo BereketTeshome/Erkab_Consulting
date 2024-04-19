@@ -9,15 +9,26 @@ import partners from "/partners.png";
 import clients from "/clients.png";
 import meeting from "/meeting.png";
 import CountUp from "react-countup";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   return (
     <>
       <Navbar />
       <div className="home">
-        <img src={webCover} alt="web cover image" className="web-cover-img" />
+        <img
+          src={webCover}
+          alt="web cover image"
+          className="web-cover-img animation"
+          data-aos="zoom-out"
+        />
 
-        <div className="home-aboutus">
+        <div className="home-aboutus animation" data-aos="zoom-in">
           <h1>Erkab Consulting PLC.</h1>
           <p className="home-aboutus-p">
             Erkab is a professional consulting firm established in 2021 G.C. the
@@ -55,7 +66,7 @@ export default function Home() {
           </h3> <br /> <br />
         </div>
 
-        <div className="vision-container">
+        <div className="vision-container animation" data-aos="zoom-in">
           <div>
             <img src={vision} alt="vision" />
             <h3>
@@ -77,7 +88,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="achievements">
+        <div className="achievements animation" data-aos="zoom-out">
           <div>
             <img src={partners} alt="partners" />
             <p>
@@ -107,7 +118,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="subscribe">
+        <div className="subscribe animation" data-aos="zoom-out">
           <div className="subscribe-container">
             <div style={{ marginTop: "60px" }}>
               <h1 className="popularh2">Get started with Erkab-Consulting</h1>

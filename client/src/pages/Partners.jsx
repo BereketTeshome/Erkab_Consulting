@@ -8,14 +8,20 @@ import Ahaz from "/ahaz_pharma.jpg";
 import Goh from "/goh.jpg";
 import PartnersBG from "/partners_bg1.jpg";
 import ArrowDown from "/Down_Arrow.gif";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Partners = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   return (
     <>
       <Navbar />
       <div className="partners">
         <div className="partners-header">
-          <div>
+          <div data-aos="fade-left" className="animation">
             <header>
               <h1>Business Partnership</h1>
             </header>
@@ -36,12 +42,17 @@ const Partners = () => {
               />
             </a>
           </div>
-          <img src={PartnersBG} alt="PartnersBG" />
+          <img
+            src={PartnersBG}
+            alt="PartnersBG"
+            data-aos="fade-right"
+            className="animation"
+          />
         </div>
 
         <span id="ourteam"></span>
         <div>
-          <h2>
+          <h2 data-aos="fade-right" className="animation">
             Our Partners <span className="underline"></span>
           </h2>
         </div>

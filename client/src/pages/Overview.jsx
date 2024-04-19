@@ -1,18 +1,25 @@
+import { useEffect } from "react";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Overview = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
+
   return (
     <>
       <Navbar />
       <div className="overview">
         <header>
-          <h2>
+          <h2 data-aos="fade-right" className="animation">
             Overview<span className="underline"></span>
           </h2>
         </header>
         <h1>WHO WE ARE</h1> <br /> <br />
-        <p className="overview_p">
+        <p className="overview_p animation" data-aos="zoom-in">
           Erkab is a professional consulting firm established in 2021 G.C. the
           share holders have a more than 13 years of profound consulting
           experience. <br />
@@ -37,21 +44,25 @@ const Overview = () => {
           include banks, NGOs, Medias and other businesses.
           <br /> <br />
           <br />
-          <h1>Areas of Specialization</h1>
+          <h1 data-aos="fade-right" className="animation">
+            Areas of Specialization
+          </h1>
           <br />
-          <b>Business development service: </b> Erkab has a tailored made
-          business development service which is an array of interconnected end
-          to end BDS provisions. <br /> This service involves need assessment
-          and gap analysis for business companies and enterprises, tailoring
-          business development service based on gaps and needs, providing
-          tailored services and mentorship, coaching, advisory and follow up
-          services.
-          <br />
-          <br /> This business development service lasts for 2-6 months. So far
-          MSMEs supported by NGOs and companies have got our services.
+          <p data-aos="zoom-in" className="animation">
+            <b>Business development service: </b> Erkab has a tailored made
+            business development service which is an array of interconnected end
+            to end BDS provisions. <br /> This service involves need assessment
+            and gap analysis for business companies and enterprises, tailoring
+            business development service based on gaps and needs, providing
+            tailored services and mentorship, coaching, advisory and follow up
+            services.
+            <br />
+            <br /> This business development service lasts for 2-6 months. So
+            far MSMEs supported by NGOs and companies have got our services.
+          </p>
         </p>
         <br />
-        <p>
+        <p data-aos="zoom-in" className="animation">
           <b>Master Salesmanship training: </b> This training is the only
           training package available from Erkab in Ethiopia. It is competence
           and behavioral based hands on practical training with 13 master
@@ -60,24 +71,24 @@ const Overview = () => {
           real estate agents etc.{" "}
         </p>
         <br />
-        <p>
+        <p data-aos="fade-left" className="animation">
           <b>Corporate Entrepreneurship training: </b> This is a capacity
           building training for corporations.
         </p>
         <br />
-        <p>
+        <p data-aos="fade-right" className="animation">
           <b>Leadership training: </b> This training is a practical leadership
           training that applies transformational leadership by using the DAC
           model
         </p>
         <br />
-        <p>
+        <p data-aos="fade-left" className="animation">
           <b>Emotional intelligent training: </b> This training has 2 types
           based targets who are corporate managers and married &relationship
           couples.
         </p>
         <br />
-        <p>
+        <p data-aos="fade-right" className="animation">
           <strong>The 3rd Eye: </strong>
           This is Erkab’s media product which is being broadcasted via Youtube
           and also it will start via television in the near future in
@@ -105,9 +116,11 @@ const Overview = () => {
           <br />
         </p>
         <br />
-        <h1>Our Achievements so far</h1>
+        <h1 data-aos="fade-right" className="animation">
+          Our Achievements so far
+        </h1>
         <br />
-        <p>
+        <p data-aos="zoom-in" className="animation">
           - Provided Business development service for more than 500 business
           enterprises
           <br />

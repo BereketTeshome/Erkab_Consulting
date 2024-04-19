@@ -3,14 +3,20 @@ import Navbar from "../components/Navbar";
 import { TeamsArray } from "../constants/constant";
 import TeamBG from "/team_bg.jpg";
 import ArrowDown from "/Down_Arrow.gif";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Teams = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   return (
     <>
       <Navbar />
       <div className="teams">
         <div className="partners-header">
-          <div>
+          <div data-aos="fade-right" className="animation">
             <header>
               <h1>The Team Experts</h1>
             </header>
@@ -29,12 +35,19 @@ const Teams = () => {
               />
             </a>
           </div>
-          <img src={TeamBG} alt="PartnersBG" />
+          <img
+            src={TeamBG}
+            alt="PartnersBG"
+            data-aos="fade-left"
+            className="animation"
+          />
         </div>
         <span id="ourteam"></span>
-        <h1 className="ourTeam-h1">OUR TEAMS</h1>
+        <h1 className="ourTeam-h1 animation" data-aos="fade-left">
+          OUR TEAMS
+        </h1>
 
-        <div className="home-container">
+        <div className="home-container animation" data-aos="zoom-in">
           {TeamsArray.map((item) => {
             return (
               <div className="profile-card" key={item.id}>

@@ -1,16 +1,22 @@
 import Navbar from "../components/Navbar";
-//import training from "/training_bg.jpg";
 import TrainingBG from "/training_bg.png";
 import ArrowDown from "/Down_Arrow.gif";
 import { TrainingsArray } from "../constants/constant";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import Footer from "../components/Footer";
 
 const Training = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   return (
     <>
       <Navbar />
       <div className="training">
         <div className="partners-header">
-          <div>
+          <div data-aos="fade-right" className="animation">
             <header>
               <h1>Trainings</h1>
             </header>
@@ -39,14 +45,23 @@ const Training = () => {
               />
             </a>
           </div>
-          <img src={TrainingBG} alt="TrainingBG" />
+          <img
+            src={TrainingBG}
+            alt="TrainingBG"
+            data-aos="fade-left"
+            className="animation"
+          />
         </div>
         <br />
         <span id="ourteam"></span>
         <div>
           {TrainingsArray.map((item) => {
             return (
-              <div key={item.id} className="sub-trainings">
+              <div
+                key={item.id}
+                className="sub-trainings animation"
+                data-aos="fade-right"
+              >
                 <img src={item.image} alt={item.title} />
                 <div>
                   <h2>{item.title}</h2>
@@ -57,6 +72,7 @@ const Training = () => {
           })}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

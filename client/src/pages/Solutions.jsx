@@ -8,18 +8,23 @@ import business from "/business.png";
 import e_ship from "/e-ship.jpg";
 import { SolutionsArray } from "../constants/constant";
 import Footer from "../components/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Solution = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
   return (
     <>
       <Navbar />
       <div className="training">
         <div className="partners-header">
-          <div>
+          <div data-aos="fade-right" className="animation">
             <header>
               <h1>Solutions</h1>
             </header>
-
             <b>
               <p>Discover Tailored Solutions for Your Business Success</p>
             </b>
@@ -43,7 +48,12 @@ const Solution = () => {
               />
             </a>
           </div>
-          <img src={SolutionsBG} alt="SolutionsBG" />
+          <img
+            src={SolutionsBG}
+            alt="SolutionsBG"
+            data-aos="zoom-in"
+            className="animation"
+          />
         </div>
         <span id="ourteam"></span>
         <br />
@@ -51,7 +61,11 @@ const Solution = () => {
         <div>
           {SolutionsArray.map((item) => {
             return (
-              <div key={item.id} className="sub-trainings">
+              <div
+                key={item.id}
+                className="sub-trainings animation"
+                data-aos="fade-right"
+              >
                 <img src={item.image} alt={item.title} />
                 <div>
                   <h2>{item.title}</h2>

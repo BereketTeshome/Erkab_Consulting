@@ -1,10 +1,9 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-//import mission from "/Eyosias.jpg";
-//import alem from "/Alemfire.png";
 import axios from "axios";
 import { useEffect, useState } from "react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const News = () => {
   const [news, setNews] = useState([]);
 
@@ -20,20 +19,27 @@ const News = () => {
     };
     fetchData();
   }, []);
+  useEffect(() => {
+    AOS.init({ duration: 1500 });
+  }, []);
 
   return (
     <>
       <Navbar />
       <div className="news">
         <header>
-          <h2>
+          <h2 data-aos="fade-right" className="animation">
             Latest News<span className="underline"></span>
           </h2>
         </header>
 
         <div className="sub-container">
           {news.map((item) => (
-            <div className="sub-news" key={item.id}>
+            <div
+              className="sub-news animation"
+              key={item.id}
+              data-aos="fade-right"
+            >
               <img src={item.newsImage} alt={item.newsTitle} />
 
               <div>

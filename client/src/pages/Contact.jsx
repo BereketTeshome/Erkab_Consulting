@@ -1,12 +1,17 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { SiGmail } from "react-icons/si";
 import { MdCall } from "react-icons/md";
 import emailjs from "emailjs-com";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Contact = () => {
   const form = useRef();
+  useEffect(() => {
+    AOS.init({ duration: 1700 });
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -34,16 +39,16 @@ const Contact = () => {
     <>
       <Navbar />
       <section id="contact">
-        <header>
+        <header data-aos="fade-right" className="animation">
           <h5>Get In Touch</h5>
+          <h2>
+            Contact <span className="me">Us</span>
+          </h2>
         </header>
-        <h2>
-          Contact <span className="me">Us</span>
-        </h2>
 
         <div className="container contact__container">
           <div className="contact__options">
-            <article className="contact__option">
+            <article className="contact__option animation" data-aos="zoom-in">
               <SiGmail className="contact-icon" />
               <h4>GMAIL</h4>
               <h5>Info@erkabconsulting.com</h5>
@@ -52,7 +57,7 @@ const Contact = () => {
               </a>
             </article>
 
-            <article className="contact__option">
+            <article className="contact__option animation" data-aos="zoom-in">
               <MdCall className="contact-icon" />
               <h4>Call</h4>
               <h5>+251940917172</h5>
@@ -60,7 +65,12 @@ const Contact = () => {
             </article>
           </div>
 
-          <form ref={form} onSubmit={sendEmail}>
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            data-aos="fade-left"
+            className="animation"
+          >
             <input
               type="text"
               name="name"
