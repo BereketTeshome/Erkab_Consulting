@@ -3,6 +3,7 @@ const express = require("express");
 const connectDB = require("./DB/db");
 const app = express();
 const userRouter = require("./routes/userRouter");
+const newsRouter = require("./routes/newsRouter");
 const cors = require("cors");
 
 //middleware
@@ -18,6 +19,7 @@ app.get("/", (req, res) => {
 
 //routes
 app.use("/user", userRouter);
+app.use("/news", newsRouter);
 
 const start = async () => {
   const port = 3001;

@@ -18,10 +18,6 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    confirmPassword: {
-      type: String,
-      required: true,
-    },
     isAdmin: {
       type: String,
       default: false,
@@ -32,7 +28,6 @@ const UserSchema = new mongoose.Schema(
 
 UserSchema.pre("save", async function () {
   this.password = await bcrypt.hash(this.password, 10);
-  this.confirmPassword = await bcrypt.hash(this.confirmPassword, 10);
 });
 UserSchema.methods.comparePassword = function (candidatePassword) {
   const isMatch = bcrypt.compare(candidatePassword, this.password);

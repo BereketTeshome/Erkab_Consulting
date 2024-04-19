@@ -44,8 +44,8 @@ const Contact = () => {
             <article className="contact__option">
               <SiGmail className="contact-icon" />
               <h4>GMAIL</h4>
-              <h5>erkabconsulting@gmail.com</h5>
-              <a href="mailto:erkabconsulting@gmail.com" target="_blank">
+              <h5>Info@erkabconsulting.com</h5>
+              <a href="mailto:Info@erkabconsulting.com" target="_blank">
                 send a message
               </a>
             </article>

@@ -1,8 +1,26 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import mission from "/Eyosias.jpg";
-import alem from "/Alemfire.png";
+//import mission from "/Eyosias.jpg";
+//import alem from "/Alemfire.png";
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 const News = () => {
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("http://localhost:3001/news/getNews");
+        console.log(res.data.news);
+        setNews(res.data.news);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -12,35 +30,16 @@ const News = () => {
         </h2>
 
         <div className="sub-container">
-          <div className="sub-news">
-            <img src={mission} alt="mission" />
+          {news.map((item) => (
+            <div className="sub-news" key={item.id}>
+              <img src={item.newsImage} alt={item.newsTitle} />
 
-            <div>
-              <h2>News title</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita, nesciunt distinctio repellat, voluptatem sit
-                cupiditate, nulla praesentium dolorum ea beatae exercitationem.
-                Dolorem vitae culpa vel sit? Ab maiores nostrum soluta
-                consequuntur doloremque. Excepturi, possimus?
-              </p>
+              <div>
+                <h2>{item.newsTitle}</h2>
+                <p>{item.newsBody}</p>
+              </div>
             </div>
-          </div>
-
-          <div className="sub-news">
-            <img src={alem} alt="alem" />
-
-            <div>
-              <h2>News title</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita, nesciunt distinctio repellat, voluptatem sit
-                cupiditate, nulla praesentium dolorum ea beatae exercitationem.
-                Dolorem vitae culpa vel sit? Ab maiores nostrum soluta
-                consequuntur doloremque. Excepturi, possimus?
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
       <Footer />

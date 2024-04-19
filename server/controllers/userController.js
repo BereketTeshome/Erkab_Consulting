@@ -16,19 +16,43 @@ const Login = async (req, res) => {
   }
   try {
     const token = user.createToken();
-    res.status(201).json({ user, token: token });
+    res.status(200).json({
+      user: {
+        name: user.username,
+        email: user.email,
+        isAdmin: user.isAdmin,
+        createdAt: user.createdAt,
+      },
+      token: token,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 };
 
 const Register = async (req, res) => {
+  const { username, email, password } = req.body;
+
+  if (!username || !password) {
+    return res.json({ error: "Please provide username and password" });
+  }
+  if (!email) {
+    return res.json({ error: "Please provide email" });
+  }
+
   try {
     const user = await User.create(req.body);
     const token = user.createToken();
-    res.status(201).json({ user, token: token });
+    res.cookie("token", token);
+    res.status(201).json({ user, token });
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    console.log(error);
+
+    if (error.code === 11000) {
+      res.status(500).json({ error: "email is already used" });
+    } else {
+      res.status(500).json({ error: error.message });
+    }
   }
 };
 
