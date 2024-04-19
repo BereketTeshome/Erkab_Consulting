@@ -16,7 +16,9 @@ const Partners = () => {
       <div className="partners">
         <div className="partners-header">
           <div>
-            <h1>Business Partnership</h1>
+            <header>
+              <h1>Business Partnership</h1>
+            </header>
 
             <p>
               Join Forces with Us: Together, Let us Build Your Business Dream

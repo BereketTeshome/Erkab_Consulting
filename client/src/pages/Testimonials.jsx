@@ -7,10 +7,10 @@ const Testimonials = () => {
       <Navbar />
       <div className="overview">
         <div className="overview-header">
-          <div className="test-header">
+          <header className="test-header">
             <h1>Testimonials </h1>
             <span className="underline"></span>
-          </div>
+          </header>
           <br />
           <h2>What Our Customers Say About Us</h2> <br />
         </div>

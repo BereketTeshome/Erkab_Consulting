@@ -34,7 +34,9 @@ const Contact = () => {
     <>
       <Navbar />
       <section id="contact">
-        <h5>Get In Touch</h5>
+        <header>
+          <h5>Get In Touch</h5>
+        </header>
         <h2>
           Contact <span className="me">Us</span>
         </h2>

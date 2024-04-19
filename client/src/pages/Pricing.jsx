@@ -7,9 +7,11 @@ function Pricing() {
     <>
       <Navbar />
       <div className="pricing">
-        <h1>
-          OUR <span>PRICING</span>
-        </h1>
+        <header>
+          <h1>
+            OUR <span>PRICING</span>
+          </h1>
+        </header>
         <div className="services__container">
           {PricesArray.map((item) => {
             return (

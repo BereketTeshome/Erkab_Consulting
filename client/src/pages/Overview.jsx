@@ -6,11 +6,13 @@ const Overview = () => {
     <>
       <Navbar />
       <div className="overview">
-        <h2>
-          Overview<span className="underline"></span>
-        </h2>
+        <header>
+          <h2>
+            Overview<span className="underline"></span>
+          </h2>
+        </header>
         <h1>WHO WE ARE</h1> <br /> <br />
-        <p>
+        <p className="overview_p">
           Erkab is a professional consulting firm established in 2021 G.C. the
           share holders have a more than 13 years of profound consulting
           experience. <br />

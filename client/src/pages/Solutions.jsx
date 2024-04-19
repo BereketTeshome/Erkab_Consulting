@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
-import training from "/solutions.jpg";
+import SolutionsBG from "/solutions_bg.png";
+import ArrowDown from "/Down_Arrow.gif";
 import design from "/design.jpg";
 import life from "/life_skill.jpg";
 import corporate from "/corporate.png";
@@ -13,11 +14,38 @@ const Solution = () => {
     <>
       <Navbar />
       <div className="training">
-        <img
-          src={training}
-          alt="training background image"
-          className="training-bg"
-        />
+        <div className="partners-header">
+          <div>
+            <header>
+              <h1>Solutions</h1>
+            </header>
+
+            <b>
+              <p>Discover Tailored Solutions for Your Business Success</p>
+            </b>
+            <p>
+              Welcome to our Solutions page, where you&apos;ll find a range of
+              customizable offerings designed to address your unique business
+              challenges and drive success. Whether you&apos;re looking to
+              streamline operations, boost productivity, or enhance customer
+              satisfaction, our diverse suite of solutions has you covered. From
+              strategic consulting to cutting-edge technology solutions,
+              we&apos;re here to help you achieve your goals and stay ahead in
+              today&apos;s competitive marketplace. Explore our offerings and
+              take the first step towards unlocking your business&apos;s full
+              potential.
+            </p>
+            <a href="#ourteam">
+              <img
+                src={ArrowDown}
+                alt="Arrow down gif"
+                className="arrowdownGIF"
+              />
+            </a>
+          </div>
+          <img src={SolutionsBG} alt="SolutionsBG" />
+        </div>
+        <span id="ourteam"></span>
         <br />
 
         <div>

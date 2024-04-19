@@ -11,7 +11,9 @@ const Teams = () => {
       <div className="teams">
         <div className="partners-header">
           <div>
-            <h1>The Experts</h1>
+            <header>
+              <h1>The Team Experts</h1>
+            </header>
 
             <p>
               Meet Our Dynamic Team: Passionate Professionals Dedicated to Your
@@ -52,9 +54,8 @@ const Teams = () => {
             );
           })}
         </div>
-
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 };

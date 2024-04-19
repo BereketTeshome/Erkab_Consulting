@@ -25,9 +25,11 @@ const News = () => {
     <>
       <Navbar />
       <div className="news">
-        <h2>
-          Latest News<span className="underline"></span>
-        </h2>
+        <header>
+          <h2>
+            Latest News<span className="underline"></span>
+          </h2>
+        </header>
 
         <div className="sub-container">
           {news.map((item) => (
