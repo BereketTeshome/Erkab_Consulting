@@ -43,10 +43,10 @@ const Teams = () => {
           />
         </div>
         <span id="ourteam"></span>
+
         <h1 className="ourTeam-h1 animation" data-aos="fade-left">
           OUR TEAMS
         </h1>
-
         <div className="home-container animation" data-aos="zoom-in">
           {TeamsArray.map((item) => {
             return (
@@ -57,11 +57,6 @@ const Teams = () => {
                 <div className="caption">
                   <h3>{item.name}</h3>
                   <p>{item.specialty}</p>
-                  <div className="social-links">
-                    <i className="fa-brands fa-facebook"></i>
-                    <i className="fa-brands fa-twitter"></i>
-                    <i className="fa-brands fa-instagram"></i>
-                  </div>
                 </div>
               </div>
             );

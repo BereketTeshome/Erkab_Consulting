@@ -1,3 +1,17 @@
+//import { useEffect, useState } from "react";
+
+// const ResizeComponent = () => {
+//   const [size, setSize] = useState({ width: window.innerWidth });
+
+//   console.log("Size: ", size);
+//   useEffect(() => {
+//     setSize({
+//       width: window.innerWidth,
+//     });
+//     ResizeComponent();
+//   }, [size]);
+// };
+
 export const navItems = [
   {
     id: 1,
@@ -7,7 +21,7 @@ export const navItems = [
   },
   {
     id: 2,
-    title: "About Us",
+    title: "About",
     path: "/overview",
     cName: "nav-item",
   },

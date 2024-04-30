@@ -6,77 +6,113 @@ import { useState } from "react";
 import ServiceDropdown from "./ServiceDropdown";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import ApplicationDropdown from "./ApplicationsDropdown";
+import { MdMenu, MdClose } from "react-icons/md";
 
 const Navbar = () => {
   const [aboutDropdown, setAboutDropdown] = useState(false);
   const [serviceDropdown, setServiceDropdown] = useState(false);
   const [applicationsDropdown, setApplicationsDropdown] = useState(false);
 
+  const handleAboutCLick = () => {
+    setAboutDropdown(!aboutDropdown);
+    if (serviceDropdown || applicationsDropdown) {
+      setServiceDropdown(false);
+      setApplicationsDropdown(false);
+    }
+  };
+
+  const handleServiceCLick = () => {
+    setServiceDropdown(!serviceDropdown);
+    if (aboutDropdown || applicationsDropdown) {
+      setAboutDropdown(false);
+      setApplicationsDropdown(false);
+    }
+  };
+
+  const handleApplicationsCLick = () => {
+    setApplicationsDropdown(!applicationsDropdown);
+    if (aboutDropdown || serviceDropdown) {
+      setAboutDropdown(false);
+      setServiceDropdown(false);
+    }
+  };
+
+  const [toggle, setToggle] = useState(true);
+
+  const handleToggle = () => {
+    setToggle(!toggle);
+  };
+
   return (
     <>
       <div className="navbar">
-        <img src={logo} alt="erkab_logo.jpg" className="logo" />
-        <nav className="nav-links">
-          <ul>
-            {navItems.map((item) => {
-              if (item.title === "About Us") {
+        <a href="/">
+          <img src={logo} alt="erkab_logo.jpg" className="logo" />
+        </a>
+        <nav>
+          <div className="nav-links">
+            <ul style={toggle ? { left: "-100%" } : { left: "0" }}>
+              {navItems.map((item) => {
+                if (item.title === "About") {
+                  return (
+                    <li key={item.id} className="dropdown-list">
+                      <Link to={item.path}>{item.title}</Link>
+                      <MdKeyboardArrowDown
+                        size={25}
+                        className="arrowDown"
+                        onClick={() => handleAboutCLick()}
+                      />
+                      {aboutDropdown && <AboutUsDropdown />}
+                    </li>
+                  );
+                }
+
+                if (item.title === "Services") {
+                  return (
+                    <li key={item.id} className="dropdown-list">
+                      <Link to={item.path}>{item.title}</Link>
+                      <MdKeyboardArrowDown
+                        size={25}
+                        className="arrowDown"
+                        onClick={() => handleServiceCLick()}
+                      />
+                      {serviceDropdown && <ServiceDropdown />}
+                    </li>
+                  );
+                }
+
+                if (item.title === "Applications") {
+                  return (
+                    <li key={item.id} className="dropdown-list">
+                      <Link to={item.path}>{item.title}</Link>
+                      <MdKeyboardArrowDown
+                        size={25}
+                        className="arrowDown"
+                        onClick={() => handleApplicationsCLick()}
+                      />
+                      {applicationsDropdown && <ApplicationDropdown />}
+                    </li>
+                  );
+                }
+
                 return (
-                  <li
-                    key={item.id}
-                    className="dropdown-list"
-                    onMouseEnter={() => setAboutDropdown(true)}
-                    onMouseLeave={() => setAboutDropdown(false)}
-                  >
-                    <Link to={item.path}>
-                      {item.title}
-                      <MdKeyboardArrowDown size={20} className="arrowDown" />
-                    </Link>
-                    {aboutDropdown && <AboutUsDropdown />}
+                  <li key={item.id} className="dropdown-list">
+                    <Link to={item.path}>{item.title}</Link>
                   </li>
                 );
-              }
-
-              if (item.title === "Services") {
-                return (
-                  <li
-                    key={item.id}
-                    className="dropdown-list"
-                    onMouseEnter={() => setServiceDropdown(true)}
-                    onMouseLeave={() => setServiceDropdown(false)}
-                  >
-                    <Link to={item.path}>
-                      {item.title}
-                      <MdKeyboardArrowDown size={20} className="arrowDown" />
-                    </Link>
-                    {serviceDropdown && <ServiceDropdown />}
-                  </li>
-                );
-              }
-
-              if (item.title === "Applications") {
-                return (
-                  <li
-                    key={item.id}
-                    className="dropdown-list"
-                    onMouseEnter={() => setApplicationsDropdown(true)}
-                    onMouseLeave={() => setApplicationsDropdown(false)}
-                  >
-                    <Link to={item.path}>
-                      {item.title}
-                      <MdKeyboardArrowDown size={20} className="arrowDown" />
-                    </Link>
-                    {applicationsDropdown && <ApplicationDropdown />}
-                  </li>
-                );
-              }
-
-              return (
-                <li key={item.id} className={item.cName}>
-                  <Link to={item.path}>{item.title}</Link>
-                </li>
-              );
-            })}
-          </ul>
+              })}
+            </ul>
+          </div>
+          <div className="check_btn_container">
+            <input type="checkbox" id="check" name="check" />
+            <label
+              htmlFor="check"
+              className="navbar_checkBtn"
+              onClick={handleToggle}
+            >
+              {toggle ? <MdMenu /> : <MdClose />}
+            </label>
+          </div>
         </nav>
       </div>
     </>
