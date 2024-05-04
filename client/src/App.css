@@ -21,7 +21,7 @@ body {
   padding: 2%;
   z-index: 999;
   width: 100%;
-  background: linear-gradient(90deg, rgb(255, 255, 255), rgb(240, 166, 29) 30%);
+  background: linear-gradient(90deg, rgb(255, 255, 255), rgb(240, 166, 29) 40%);
   box-shadow: 1px 1px 7px -1px;
   height: 70px;
   align-items: center;
@@ -95,7 +95,6 @@ body {
 }
 
 .nav-links ul li a {
-  /* z-index: 2000000000; */
   color: white;
   text-decoration: none;
   font-size: 0.9rem;
@@ -126,8 +125,7 @@ body {
 }
 
 .logo {
-  width: 100px;
-  height: 70px;
+  width: 230px;
 }
 
 .dropdown-links {

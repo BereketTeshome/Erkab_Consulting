@@ -111,7 +111,18 @@ const Overview = () => {
           and also it will start via television in the near future in
           partnership with Erkab consulting, Abay TV and EDI. <br />
           <a href="https://t.me/OpenTheThirdEye" target="_blank">
-            <i>https://t.me/OpenTheThirdEye</i>
+            <i>Click to see our Telegram Channel</i>
+          </a>
+          <br />
+          <a
+            href="https://www.tiktok.com/@ze3rdeye?_t=8m4EZHnMiUI&_r=1"
+            target="_blank"
+          >
+            <i>Click to see our Tiktok Page</i>
+          </a>
+          <br />
+          <a href="https://www.youtube.com/@youtubecreatores96" target="_blank">
+            <i>Click to see our Youtube Channel</i>
           </a>
           <br />
           <br />

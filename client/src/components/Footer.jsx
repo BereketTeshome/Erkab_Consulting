@@ -52,7 +52,7 @@ const Footer = () => {
         </li>
       </ul>
       <hr style={{ width: "100%", opacity: "0.2" }} />
-      <p>&copy; 2024 ERKAB CONSULTING PLC. | All Rights Reserved</p>
+      <p>&copy; ERKAB CONSULTING PLC. | All Rights Reserved</p>
     </footer>
   );
 };
