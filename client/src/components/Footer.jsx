@@ -1,4 +1,4 @@
-import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { BsInstagram, BsLinkedin } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -11,15 +11,6 @@ const Footer = () => {
       </div>
 
       <ul className="social-icons">
-        <li>
-          <a
-            href="https://www.facebook.com/profile.php?id=100006140478304"
-            target="_blank"
-            className="social-icon"
-          >
-            <BsFacebook />
-          </a>
-        </li>
         <li>
           <a
             href="https://www.instagram.com/beki_tesh"
@@ -50,7 +41,7 @@ const Footer = () => {
         <li>
           <a href="/trainings">Services</a>
         </li>
-        <li>
+        <li className="footer-price">
           <a href="/pricing">Pricing</a>
         </li>
         <li>

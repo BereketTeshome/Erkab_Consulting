@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 const Overview = () => {
   useEffect(() => {
@@ -12,6 +13,22 @@ const Overview = () => {
   return (
     <>
       <Navbar />
+
+      <div className="sub-links">
+        <h3>Related Pages:</h3>
+        <ul>
+          <li>
+            <Link to="/teams">Team </Link>
+          </li>
+          <li>
+            <Link to="/partners"> Partners </Link>
+          </li>
+          <li>
+            <Link to="/testimonials"> Testimonials</Link>
+          </li>
+        </ul>
+      </div>
+
       <div className="overview">
         <header>
           <h2 data-aos="fade-right" className="animation">

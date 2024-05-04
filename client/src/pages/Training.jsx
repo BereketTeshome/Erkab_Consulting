@@ -6,6 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const Training = () => {
   useEffect(() => {
@@ -14,6 +15,15 @@ const Training = () => {
   return (
     <>
       <Navbar />
+      <div className="sub-links">
+        <h3>Related Pages:</h3>
+        <ul>
+          <li>
+            <Link to="/solutions"> Solutions </Link>
+          </li>
+        </ul>
+      </div>
+
       <div className="training">
         <div className="partners-header">
           <div data-aos="fade-right" className="animation">

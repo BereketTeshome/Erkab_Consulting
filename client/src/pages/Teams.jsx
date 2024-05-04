@@ -6,6 +6,7 @@ import ArrowDown from "/Down_Arrow.gif";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Teams = () => {
   useEffect(() => {
@@ -14,6 +15,18 @@ const Teams = () => {
   return (
     <>
       <Navbar />
+      <div className="sub-links">
+        <h3>Related Pages:</h3>
+        <ul>
+          <li>
+            <Link to="/partners"> Partners </Link>
+          </li>
+          <li>
+            <Link to="/testimonials"> Testimonials</Link>
+          </li>
+        </ul>
+      </div>
+
       <div className="teams">
         <div className="partners-header">
           <div data-aos="fade-right" className="animation">
