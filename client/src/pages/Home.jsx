@@ -12,6 +12,12 @@ import CountUp from "react-countup";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import SAA from "/SAA.png";
+import EBC from "/EBC.jpg";
+import PIN from "/PIN.png";
+import CJ from "/CJ.jpg";
+import Ahaz from "/ahaz_pharma.jpg";
+import Goh from "/goh.jpg";
 
 export default function Home() {
   useEffect(() => {
@@ -85,6 +91,34 @@ export default function Home() {
           <div>
             <img src={values} alt="values" />
             <h3>Agility, Continuous improvement, Curiosity, Compassion</h3>
+          </div>
+        </div>
+
+        <div className="partners">
+          <span id="ourteam"></span>
+          <div>
+            <h2 data-aos="fade-right" className="animation">
+              Our Partners <span className="underline"></span>
+            </h2>
+          </div>
+          <div className="solution-scroll">
+            <div className="images-scroll">
+              <img src={SAA} alt="SAA" />
+              <img src={EBC} alt="life" />
+              <img src={PIN} alt="PIN" />
+              <img src={CJ} alt="CJ" />
+              <img src={Ahaz} alt="Ahaz" />
+              <img src={Goh} alt="Goh" />
+            </div>
+
+            <div className="images-scroll">
+              <img src={SAA} alt="SAA" />
+              <img src={EBC} alt="life" />
+              <img src={PIN} alt="PIN" />
+              <img src={CJ} alt="CJ" />
+              <img src={Ahaz} alt="Ahaz" />
+              <img src={Goh} alt="Goh" />
+            </div>
           </div>
         </div>
 

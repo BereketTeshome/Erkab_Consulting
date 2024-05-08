@@ -1,17 +1,3 @@
-//import { useEffect, useState } from "react";
-
-// const ResizeComponent = () => {
-//   const [size, setSize] = useState({ width: window.innerWidth });
-
-//   console.log("Size: ", size);
-//   useEffect(() => {
-//     setSize({
-//       width: window.innerWidth,
-//     });
-//     ResizeComponent();
-//   }, [size]);
-// };
-
 export const navItems = [
   {
     id: 1,
@@ -72,12 +58,6 @@ export const aboutDropdown = [
   },
   {
     id: 3,
-    title: "Our Partners",
-    path: "/partners",
-    cName: "submenu-item",
-  },
-  {
-    id: 4,
     title: "Testimonials",
     path: "/testimonials",
     cName: "submenu-item",

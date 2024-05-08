@@ -21,9 +21,6 @@ const Overview = () => {
             <Link to="/teams">Team </Link>
           </li>
           <li>
-            <Link to="/partners"> Partners </Link>
-          </li>
-          <li>
             <Link to="/testimonials"> Testimonials</Link>
           </li>
         </ul>

@@ -19,9 +19,6 @@ const Teams = () => {
         <h3>Related Pages:</h3>
         <ul>
           <li>
-            <Link to="/partners"> Partners </Link>
-          </li>
-          <li>
             <Link to="/testimonials"> Testimonials</Link>
           </li>
         </ul>

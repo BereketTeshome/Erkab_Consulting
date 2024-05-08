@@ -949,6 +949,9 @@ textarea {
   font-style: italic;
   text-align: justify;
 }
+.sub-links {
+  display: none;
+}
 
 /* footer */
 
@@ -1139,6 +1142,9 @@ footer .wave#wave4 {
   .dropdown-list {
     justify-content: center;
     line-height: 11px;
+  }
+  .sub-links {
+    display: flex;
   }
 
   .arrowDown {
