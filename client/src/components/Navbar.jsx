@@ -55,13 +55,18 @@ const Navbar = () => {
               {navItems.map((item) => {
                 if (item.title === "About") {
                   return (
-                    <li key={item.id} className="dropdown-list">
+                    <li
+                      key={item.id}
+                      className="dropdown-list"
+                      onMouseLeave={() => handleAboutCLick()}
+                    >
                       <Link to={item.path}>{item.title}</Link>
                       <MdKeyboardArrowDown
                         size={25}
                         className="arrowDown"
-                        onClick={() => handleAboutCLick()}
+                        onMouseEnter={() => handleAboutCLick()}
                       />
+
                       {aboutDropdown && <AboutUsDropdown />}
                     </li>
                   );
@@ -69,12 +74,16 @@ const Navbar = () => {
 
                 if (item.title === "Services") {
                   return (
-                    <li key={item.id} className="dropdown-list">
+                    <li
+                      key={item.id}
+                      className="dropdown-list"
+                      onMouseLeave={() => handleServiceCLick()}
+                    >
                       <Link to={item.path}>{item.title}</Link>
                       <MdKeyboardArrowDown
                         size={25}
                         className="arrowDown"
-                        onClick={() => handleServiceCLick()}
+                        onMouseEnter={() => handleServiceCLick()}
                       />
                       {serviceDropdown && <ServiceDropdown />}
                     </li>
@@ -83,12 +92,16 @@ const Navbar = () => {
 
                 if (item.title === "Applications") {
                   return (
-                    <li key={item.id} className="dropdown-list">
+                    <li
+                      key={item.id}
+                      className="dropdown-list"
+                      onMouseLeave={() => handleApplicationsCLick()}
+                    >
                       <Link to={item.path}>{item.title}</Link>
                       <MdKeyboardArrowDown
                         size={25}
                         className="arrowDown"
-                        onClick={() => handleApplicationsCLick()}
+                        onMouseEnter={() => handleApplicationsCLick()}
                       />
                       {applicationsDropdown && <ApplicationDropdown />}
                     </li>
@@ -108,7 +121,7 @@ const Navbar = () => {
             <label
               htmlFor="check"
               className="navbar_checkBtn"
-              onClick={handleToggle}
+              onMouseEnter={handleToggle}
             >
               {toggle ? <MdMenu /> : <MdClose />}
             </label>

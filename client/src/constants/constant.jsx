@@ -135,4 +135,19 @@ export const PricesArray = [
     title: "Business development service",
     desc: "negotiable",
   },
+  {
+    id: 10,
+    title: "Strategic Plan",
+    desc: "negotiable",
+  },
+  {
+    id: 11,
+    title: "Business Plan",
+    desc: "negotiable",
+  },
+  {
+    id: 12,
+    title: "Feasibility Study",
+    desc: "negotiable",
+  },
 ];

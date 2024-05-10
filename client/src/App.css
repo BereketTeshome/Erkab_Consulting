@@ -274,10 +274,6 @@ body {
   color: #666;
 }
 
-.home-header h2 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
 .light-text {
   font-weight: lighter;
 }
@@ -448,6 +444,37 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: lighter;
   color: #555;
+}
+
+.location {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  background: #1d66d3;
+  margin-top: 110px;
+  padding: 4%;
+  color: #fff;
+  box-shadow: 1px 1px 10px 4px rgba(255, 166, 0, 0.658);
+  align-items: center;
+}
+.loc-left {
+  width: 60%;
+  line-height: 35px;
+}
+.loc-left-p {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.432);
+}
+.loc-left h3 {
+  margin-top: 55px;
+}
+.opening-hours {
+  display: flex;
+  gap: 1rem;
+  background: #ece9e9;
+  color: #003cff;
+  margin-top: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
 }
 
 .home-aboutus {
@@ -1179,6 +1206,18 @@ footer .wave#wave4 {
   }
   .achievements img {
     margin-top: 40px;
+  }
+  .location {
+    display: block;
+    text-align: center;
+  }
+  .loc-left {
+    width: 100%;
+    line-height: 35px;
+    margin-bottom: 35px;
+  }
+  .opening-hours {
+    justify-content: center;
   }
   footer .social-icons li a {
     font-size: 1.5em;

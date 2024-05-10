@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 import projects from "/projects.png";
 import partners from "/partners.png";
 import clients from "/clients.png";
-import meeting from "/meeting.png";
 import CountUp from "react-countup";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -18,6 +17,7 @@ import PIN from "/PIN.png";
 import CJ from "/CJ.jpg";
 import Ahaz from "/ahaz_pharma.jpg";
 import Goh from "/goh.jpg";
+import Map from "../components/Map";
 
 export default function Home() {
   useEffect(() => {
@@ -65,11 +65,8 @@ export default function Home() {
         <br />
 
         <div className="home-header">
-          <h1>Master Salesmanship-Beyond Selling Goods and Services</h1>
-          <h2 className="mid-text">ABOUT THE ERKAB CONSULTANCY</h2>
-          <h3 className="light-text">
-            Key features of our company
-          </h3> <br /> <br />
+          <h1 className="light-text">Key features of our company</h1> <br />{" "}
+          <br />
         </div>
 
         <div className="vision-container animation" data-aos="zoom-in">
@@ -133,21 +130,15 @@ export default function Home() {
           <div>
             <img src={projects} alt="projects" />
             <p>
-              <CountUp start={5} end={55} duration={16} />+<p>Projects Done</p>
+              <CountUp start={5} end={55} duration={10} />+<p>Projects Done</p>
             </p>
           </div>
 
           <div>
             <img src={clients} alt="clients" />
             <p>
-              <CountUp start={5} end={89} duration={16} />+<p>Happy Clients</p>
-            </p>
-          </div>
-
-          <div>
-            <img src={meeting} alt="meeting" />
-            <p>
-              <CountUp start={5} end={150} duration={16} />+<p>Meetings</p>
+              <CountUp start={5} end={89} duration={5000} />+
+              <p>Happy Clients</p>
             </p>
           </div>
         </div>
@@ -161,6 +152,30 @@ export default function Home() {
                 <button>Get Started</button>
               </a>
             </div>
+          </div>
+        </div>
+
+        <div className="location">
+          <div className="loc-left">
+            <h1>Visit Us</h1>
+            <span className="underline"></span>
+
+            <p className="loc-left-p">Addis Ababa 22,Golagol Office No: 1113</p>
+
+            <h3>Opening Hours:</h3>
+            <div className="opening-hours">
+              <p>MON - SAT</p>
+              <h4>02:00 - 12:00 LT</h4>
+            </div>
+
+            <div className="opening-hours">
+              <p>SUNDAY</p>
+              <h4>Closed</h4>
+            </div>
+          </div>
+
+          <div className="loc-right">
+            <Map />
           </div>
         </div>
       </div>
