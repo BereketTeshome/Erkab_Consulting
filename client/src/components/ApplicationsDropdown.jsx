@@ -11,9 +11,7 @@ const ApplicationDropdown = () => {
         <ul onClick={() => setDrop(!drop)}>
           {ApplicationsDropdown.map((item) => (
             <li key={item.id} className={item.cName}>
-              <Link to={item.path} target="_blank">
-                {item.title}
-              </Link>
+              <Link to={item.path}>{item.title}</Link>
             </li>
           ))}
         </ul>
