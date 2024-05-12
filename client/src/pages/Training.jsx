@@ -1,11 +1,9 @@
-import Navbar from "../components/Navbar";
 import TrainingBG from "/training_bg.png";
 import ArrowDown from "/Down_Arrow.gif";
 import { TrainingsArray } from "../constants/constant";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 const Training = () => {
@@ -14,7 +12,6 @@ const Training = () => {
   }, []);
   return (
     <>
-      <Navbar />
       <div className="sub-links">
         <h3>Related Pages:</h3>
         <ul>
@@ -82,7 +79,6 @@ const Training = () => {
           })}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

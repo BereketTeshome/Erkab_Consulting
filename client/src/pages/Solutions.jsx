@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import SolutionsBG from "/solutions_bg.png";
 import ArrowDown from "/Down_Arrow.gif";
 import design from "/design.jpg";
@@ -7,7 +6,7 @@ import corporate from "/corporate.png";
 import business from "/business.png";
 import e_ship from "/e-ship.jpg";
 import { SolutionsArray } from "../constants/constant";
-import Footer from "../components/Footer";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
@@ -19,7 +18,6 @@ const Solution = () => {
   }, []);
   return (
     <>
-      <Navbar />
       <div className="sub-links">
         <h3>Related Pages:</h3>
         <ul>
@@ -137,7 +135,6 @@ const Solution = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

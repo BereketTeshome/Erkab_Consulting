@@ -1,5 +1,3 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import { TeamsArray } from "../constants/constant";
 import TeamBG from "/team_bg.jpg";
 import ArrowDown from "/Down_Arrow.gif";
@@ -14,7 +12,6 @@ const Teams = () => {
   }, []);
   return (
     <>
-      <Navbar />
       <div className="sub-links">
         <h3>Related Pages:</h3>
         <ul>
@@ -73,7 +70,6 @@ const Teams = () => {
           })}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

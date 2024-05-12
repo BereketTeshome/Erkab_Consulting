@@ -1,6 +1,9 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
+import Bds from "./pages/BDS";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const Home = lazy(() => import("./pages/Home"));
 const Contact = lazy(() => import("./pages/Contact"));
@@ -26,6 +29,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Suspense>
+          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/pricing" element={<Pricing />} />
@@ -36,6 +40,7 @@ function App() {
             <Route path="/teams" element={<Teams />} />
             <Route path="/trainings" element={<Training />} />
             <Route path="/solutions" element={<Solutions />} />
+            <Route path="/bds" element={<Bds />} />
             <Route
               path="/trainingIndividual"
               element={<IndividualTraining />}
@@ -46,6 +51,7 @@ function App() {
             />
             <Route path="/bds" element={<BusinessDevelopmentService />} />
           </Routes>
+          <Footer />
         </Suspense>
       </BrowserRouter>
     </div>

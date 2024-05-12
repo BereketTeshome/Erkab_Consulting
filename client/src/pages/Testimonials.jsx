@@ -1,6 +1,5 @@
 import { useEffect } from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
@@ -11,7 +10,6 @@ const Testimonials = () => {
   }, []);
   return (
     <>
-      <Navbar />
       <div className="sub-links">
         <h3>Related Pages:</h3>
         <ul>
@@ -57,8 +55,6 @@ const Testimonials = () => {
           </div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };

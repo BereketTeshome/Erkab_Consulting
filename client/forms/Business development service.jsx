@@ -1,12 +1,9 @@
 import FormfacadeEmbed from "@formfacade/embed-react";
-import Navbar from "../src/components/Navbar";
 import { Link } from "react-router-dom";
 
 const BusinessDevelopmentService = () => {
   return (
     <div>
-      <Navbar />
-
       <div className="sub-links">
         <h3>Related Pages:</h3>
         <ul>

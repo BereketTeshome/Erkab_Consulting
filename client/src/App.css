@@ -288,26 +288,69 @@ body {
   border-radius: 30px;
   padding: 3% 4%;
   margin: 5%;
-  text-align: center;
   transition: 0.4s all;
   cursor: pointer;
-  background-color: #ffffff96;
+  background: linear-gradient(180deg, #ffa600e7, #0000ffdc);
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+#vision-1 {
+  animation: MoveUpDownOne 1.5s linear infinite;
+}
+
+@keyframes MoveUpDownOne {
+  0%,
+  100% {
+    bottom: 20px;
+  }
+  50% {
+    bottom: 1px;
+  }
+}
+
+#vision-2 {
+  animation: MoveUpDownTwo 1.5s linear infinite;
+}
+@keyframes MoveUpDownTwo {
+  0%,
+  100% {
+    bottom: 10px;
+  }
+  50% {
+    bottom: 30px;
+  }
+}
+
+#vision-3 {
+  animation: MoveUpDownThree 1.5s linear infinite;
+}
+@keyframes MoveUpDownThree {
+  0%,
+  100% {
+    bottom: 20px;
+  }
+  50% {
+    bottom: 1px;
+  }
 }
 
 .vision-container div h3 {
+  color: #fff;
   margin-top: 10px;
   font-weight: lighter;
-  color: #555;
   transition: 0.4s all;
   font-size: 17px;
 }
 
 .vision-container div:hover {
-  background-color: #4161df;
+  scale: 1.1;
+  background: linear-gradient(90deg, #ffa600e7, #0000ffdc);
 }
 
-.vision-container div:hover h3 {
-  color: #fff;
+.vision-container div img {
+  display: block;
+  margin: 0 auto;
 }
 
 .subscribe {
@@ -1118,6 +1161,11 @@ footer .wave#wave4 {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
+  #vision-1,
+  #vision-2,
+  #vision-3 {
+    animation: none;
+  }
 
   .service {
     height: auto;
@@ -1206,7 +1254,9 @@ footer .wave#wave4 {
   }
   .achievements img {
     margin-top: 40px;
+    background: #f7a205;
   }
+
   .location {
     display: block;
     text-align: center;

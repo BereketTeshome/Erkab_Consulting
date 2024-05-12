@@ -77,6 +77,12 @@ export const serviceDropdown = [
     path: "/solutions",
     cName: "submenu-item",
   },
+  {
+    id: 3,
+    title: "BDS",
+    path: "/bds",
+    cName: "submenu-item",
+  },
 ];
 
 export const ApplicationsDropdown = [

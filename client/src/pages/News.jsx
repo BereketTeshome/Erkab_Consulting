@@ -1,5 +1,3 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import newsImage from "../../public/logo1.jpg";
 // import axios from "axios";
 // import { useEffect, useState } from "react";
@@ -26,30 +24,28 @@ const News = () => {
   }, []);
 
   return (
-    <>
-      <Navbar />
-      <div className="news">
-        <header>
-          <h2 data-aos="fade-right" className="animation">
-            Latest News<span className="underline"></span>
-          </h2>
-        </header>
+    <div className="news">
+      <header>
+        <h2 data-aos="fade-right" className="animation">
+          Latest News<span className="underline"></span>
+        </h2>
+      </header>
 
-        <div className="sub-container">
-          <div className="sub-news animation" data-aos="fade-right">
-            <img src={newsImage} alt="news image" />
+      <div className="sub-container">
+        <div className="sub-news animation" data-aos="fade-right">
+          <img src={newsImage} alt="news image" />
 
-            <div>
-              <h2>News Title</h2>
-              <p>
-                This is not a real news, It is just for a demo purpose it will
-                be filled out with an original news content!
-              </p>
-            </div>
+          <div>
+            <h2>News Title</h2>
+            <p>
+              This is not a real news, It is just for a demo purpose it will be
+              filled out with an original news content!
+            </p>
           </div>
         </div>
+      </div>
 
-        {/* <div className="sub-container">
+      {/* <div className="sub-container">
           {news.map((item) => (
             <div
               className="sub-news animation"
@@ -65,9 +61,7 @@ const News = () => {
             </div>
           ))}
         </div> */}
-      </div>
-      <Footer />
-    </>
+    </div>
   );
 };
 
