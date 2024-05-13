@@ -24,6 +24,9 @@ const Solution = () => {
           <li>
             <Link to="/trainings">Trainings </Link>
           </li>
+          <li>
+            <Link to="/bds">BDS </Link>
+          </li>
         </ul>
       </div>
       <div className="training">

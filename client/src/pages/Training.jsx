@@ -18,6 +18,9 @@ const Training = () => {
           <li>
             <Link to="/solutions"> Solutions </Link>
           </li>
+          <li>
+            <Link to="/bds">BDS </Link>
+          </li>
         </ul>
       </div>
 

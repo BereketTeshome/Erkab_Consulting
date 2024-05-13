@@ -1,4 +1,3 @@
-import webCover from "/web cover.jpg";
 import vision from "/vision.png";
 import mission from "/mission.png";
 import values from "/values.png";
@@ -8,7 +7,7 @@ import clients from "/clients.png";
 import CountUp from "react-countup";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import SAA from "/SAA.png";
 import EBC from "/EBC.jpg";
 import PIN from "/PIN.png";
@@ -17,19 +16,46 @@ import Ahaz from "/ahaz_pharma.jpg";
 import Goh from "/goh.jpg";
 import Map from "../components/Map";
 import { GiCheckMark } from "react-icons/gi";
+import ReactPlayer from "react-player";
+import axios from "axios";
 
 export default function Home() {
+  const [videoId, setVideoId] = useState(null);
+
+  useEffect(() => {
+    const fetchVideo = async () => {
+      try {
+        const API_KEY = "AIzaSyC_gZE1BGiPNbL8HWpH4zd7VrEH-ZcAJhQ";
+        const channelId = "UCO_OTsGDfHHqPAoraYRAULg";
+        const response = await axios.get(
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=1&order=date&type=video&key=${API_KEY}`
+        );
+
+        if (response.data.items.length > 0) {
+          const latestVideo = response.data.items[0];
+          setVideoId(latestVideo.id.videoId);
+        }
+      } catch (error) {
+        console.error("Error fetching YouTube data:", error);
+      }
+    };
+
+    fetchVideo();
+  }, []);
+
   useEffect(() => {
     AOS.init({ duration: 1500 });
   }, []);
   return (
     <div className="home">
-      <img
-        src={webCover}
-        alt="web cover image"
-        className="web-cover-img animation"
-        data-aos="zoom-out"
-      />
+      <div className="animation" data-aos="zoom-in">
+        <ReactPlayer
+          url={`https://www.youtube.com/watch?v=${videoId}`}
+          controls={true}
+          width="100%"
+          height="500px"
+        />
+      </div>
 
       <div className="home-aboutus animation" data-aos="zoom-in">
         <h1>Erkab Consulting PLC.</h1>
@@ -129,7 +155,7 @@ export default function Home() {
         </div>
 
         <div>
-          <img src={projects} alt="projects" />
+          <img src={projects} alt="projects" id="projects-img" />
           <p>
             <CountUp start={5} end={55} duration={10} />+<p>Projects Done</p>
           </p>
@@ -148,14 +174,14 @@ export default function Home() {
           <div style={{ marginTop: "60px" }}>
             <h1 className="popularh2">Get started with Erkab-Consulting</h1>
             <p>Subscribe and find super affordable trainings from us</p>
-            <a href="mailto:erkabconsulting@gmail.com" target="_blank">
+            <a href="mailto:Info@erkabconsulting.com" target="_blank">
               <button>Get Started</button>
             </a>
           </div>
         </div>
       </div>
 
-      <div className="location">
+      <div className="location animation" data-aos="zoom-in">
         <div className="loc-left">
           <h1>Visit Us</h1>
           <span className="underline"></span>

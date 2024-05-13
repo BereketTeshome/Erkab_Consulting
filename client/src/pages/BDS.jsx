@@ -10,6 +10,9 @@ const Bds = () => {
           <li>
             <Link to="/trainings">Trainings </Link>
           </li>
+          <li>
+            <Link to="/solutions">Solutions </Link>
+          </li>
         </ul>
       </div>
       <div className="training">
@@ -20,8 +23,8 @@ const Bds = () => {
             </header>
             <b>
               <p>
-                Unlocking Potential: Comprehensive Non-Financial Business
-                Development Services (BDS)
+                Comprehensive Business Development Services: Empowering
+                Entrepreneurs
               </p>
             </b>
             <p>
