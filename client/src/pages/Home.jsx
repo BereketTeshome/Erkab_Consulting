@@ -111,9 +111,11 @@ export default function Home() {
         <div id="vision-3">
           <img src={values} alt="values" />
           <h3>
-            <GiCheckMark /> Agility <br /> <GiCheckMark /> Continuous <br />{" "}
-            <GiCheckMark /> improvement <br /> <GiCheckMark /> Curiosity <br />{" "}
-            <GiCheckMark /> Compassion
+            <GiCheckMark /> Agility <br />
+            <GiCheckMark /> Curiosity <br /> <GiCheckMark /> Compassion
+            <p style={{ fontSize: "0.97rem" }}>
+              <GiCheckMark /> Continuous Improvement
+            </p>
           </h3>
         </div>
       </div>
@@ -150,7 +152,7 @@ export default function Home() {
         <div>
           <img src={partners} alt="partners" />
           <p>
-            <CountUp start={5} end={14} duration={16} />+<p>Partners</p>
+            <CountUp start={5} end={10} duration={16} />+<p>Partners</p>
           </p>
         </div>
 
@@ -164,7 +166,7 @@ export default function Home() {
         <div>
           <img src={clients} alt="clients" />
           <p>
-            <CountUp start={5} end={89} duration={5000} />+<p>Happy Clients</p>
+            <CountUp start={5} end={5000} duration={10} />+<p>Happy Clients</p>
           </p>
         </div>
       </div>

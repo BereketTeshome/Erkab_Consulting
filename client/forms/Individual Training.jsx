@@ -17,7 +17,7 @@ const IndividualTraining = () => {
       </div>
 
       <FormfacadeEmbed
-        formFacadeURL="https://formfacade.com/include/104028434745036071476/form/1FAIpQLSev6eklpiedeBtZ05qRQ9guB03f1cU9aAo2L59lHgZkqeVqbw/classic.js/?div=ff-compose"
+        formFacadeURL="https://formfacade.com/include/108098941423634561116/form/1FAIpQLScsbFIqp8w9Ztbxx2mwar2-LJwMUTZMO21246WyWqnTlTcMNw/classic.js/?div=ff-compose"
         onSubmitForm={() => console.log("Form submitted")}
       />
     </div>

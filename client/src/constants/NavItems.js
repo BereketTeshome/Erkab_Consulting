@@ -101,7 +101,7 @@ export const ApplicationsDropdown = [
   {
     id: 2,
     title: "Business D.S",
-    path: "/bds",
+    path: "/bdsForm",
     cName: "submenu-item",
   },
 ];

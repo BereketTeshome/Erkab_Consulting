@@ -49,7 +49,7 @@ function App() {
               path="/businessOrganizations"
               element={<BusinessOrganizationForm />}
             />
-            <Route path="/bds" element={<BusinessDevelopmentService />} />
+            <Route path="/bdsForm" element={<BusinessDevelopmentService />} />
           </Routes>
           <Footer />
         </Suspense>
