@@ -1,27 +1,31 @@
-import newsImage from "../../public/logo1.jpg";
-// import axios from "axios";
-// import { useEffect, useState } from "react";
+//import newsImage from "../../public/logo1.jpg";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 const News = () => {
-  // const [news, setNews] = useState([]);
+  const [news, setNews] = useState([]);
+  const [readMore, setReadMore] = useState(false);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const res = await axios.get("http://localhost:3001/news/getNews");
-  //       console.log(res.data.news);
-  //       setNews(res.data.news);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-  //   fetchData();
-  // }, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("http://localhost:3001/news/getNews");
+        console.log(res.data.news);
+        setNews(res.data.news);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchData();
+  }, []);
   useEffect(() => {
     AOS.init({ duration: 1500 });
   }, []);
+
+  const handleRead = () => {
+    setReadMore(!readMore);
+  };
 
   return (
     <div className="news">
@@ -32,35 +36,30 @@ const News = () => {
       </header>
 
       <div className="sub-container">
-        <div className="sub-news animation" data-aos="fade-right">
-          <img src={newsImage} alt="news image" />
+        {news.map((item) => (
+          <div
+            className="sub-news animation"
+            key={item.id}
+            data-aos="fade-right"
+          >
+            <img src={item.newsImage} alt={item.newsTitle} />
 
-          <div>
-            <h2>News Title</h2>
-            <p>
-              This is not a real news, It is just for a demo purpose it will be
-              filled out with an original news content!
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* <div className="sub-container">
-          {news.map((item) => (
-            <div
-              className="sub-news animation"
-              key={item.id}
-              data-aos="fade-right"
-            >
-              <img src={item.newsImage} alt={item.newsTitle} />
-
-              <div>
-                <h2>{item.newsTitle}</h2>
-                <p>{item.newsBody}</p>
-              </div>
+            <div>
+              <h2>{item.newsTitle}</h2>
+              <p>
+                {readMore || item.newsBody.length < 90
+                  ? item.newsBody
+                  : `${item.newsBody.substring(0, 90)}...`}
+                {item.newsBody.length > 90 && (
+                  <button className="readMore-btn" onClick={() => handleRead()}>
+                    {readMore ? " _Show Less" : " _Show More"}
+                  </button>
+                )}
+              </p>
             </div>
-          ))}
-        </div> */}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

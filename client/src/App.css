@@ -466,7 +466,11 @@ body {
 .achievements div {
   text-align: center;
 }
-
+.readMore-btn {
+  border: none;
+  color: #0168b8;
+  cursor: pointer;
+}
 .achievements img {
   width: 60px;
   height: 60px;
@@ -960,7 +964,7 @@ textarea {
 
 .sub-news p {
   color: #555;
-  text-align: justify;
+  text-align: start;
 }
 
 .sub-news div {
@@ -968,8 +972,8 @@ textarea {
 }
 
 .sub-news img {
-  width: 200px;
-  height: 130px;
+  width: 320px;
+  height: fit-content;
   border-radius: 10px;
   box-shadow: 1px 1px 5px -1px black;
 }
@@ -1280,8 +1284,8 @@ footer .wave#wave4 {
     text-align: center;
   }
   .sub-news img {
-    width: 250px;
-    height: 170px;
+    width: 100%;
+    height: fit-content;
     border-radius: 10px;
     box-shadow: 1px 1px 5px -1px black;
   }

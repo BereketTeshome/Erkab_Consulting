@@ -2,23 +2,18 @@ require("dotenv").config();
 const express = require("express");
 const connectDB = require("./DB/db");
 const app = express();
-const userRouter = require("./routes/userRouter");
 const newsRouter = require("./routes/newsRouter");
 const cors = require("cors");
 
 //middleware
 app.use(express.json());
 app.use(cors());
-app.get("/", (req, res) => {
-  res.send("Hello world");
-});
 
 app.get("/", (req, res) => {
   res.setHeader("Access-Control-Allow-Credentials", "true");
 });
 
 //routes
-app.use("/user", userRouter);
 app.use("/news", newsRouter);
 
 const start = async () => {
