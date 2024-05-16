@@ -1,4 +1,4 @@
-import { BsFacebook, BsLinkedin } from "react-icons/bs";
+import { BsFacebook, BsYoutube, BsTiktok, BsLinkedin } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -18,6 +18,24 @@ const Footer = () => {
             className="social-icon"
           >
             <BsFacebook />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/@youtubecreatores96"
+            target="_blank"
+            className="social-icon"
+          >
+            <BsYoutube />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.tiktok.com/@ze3rdeye?_t=8m4EZHnMiUI&_r=1"
+            target="_blank"
+            className="social-icon"
+          >
+            <BsTiktok size={28} />
           </a>
         </li>
         <li>

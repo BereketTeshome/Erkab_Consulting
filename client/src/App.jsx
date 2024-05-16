@@ -50,6 +50,7 @@ function App() {
               element={<BusinessOrganizationForm />}
             />
             <Route path="/bdsForm" element={<BusinessDevelopmentService />} />
+            <Route path="*" element={<Home />} />
           </Routes>
           <Footer />
         </Suspense>
