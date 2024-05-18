@@ -10,7 +10,9 @@ const News = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("http://localhost:3001/news/getNews");
+        const res = await axios.get(
+          "https://erkab-consulting-sezq.vercel.app/news/getNews"
+        );
         console.log(res.data.news);
         setNews(res.data.news);
       } catch (error) {

@@ -4,7 +4,6 @@ import AboutUsDropdown from "./AboutUsDropdown";
 import { navItems } from "../constants/NavItems";
 import { useState } from "react";
 import ServiceDropdown from "./ServiceDropdown";
-import { MdKeyboardArrowDown } from "react-icons/md";
 import ApplicationDropdown from "./ApplicationsDropdown";
 import { MdMenu, MdClose } from "react-icons/md";
 
@@ -60,12 +59,12 @@ const Navbar = () => {
                       className="dropdown-list"
                       onMouseLeave={() => handleAboutCLick()}
                     >
-                      <Link to={item.path}>{item.title}</Link>
-                      <MdKeyboardArrowDown
-                        size={25}
-                        className="arrowDown"
+                      <Link
+                        to={item.path}
                         onMouseEnter={() => handleAboutCLick()}
-                      />
+                      >
+                        {item.title}
+                      </Link>
 
                       {aboutDropdown && <AboutUsDropdown />}
                     </li>
@@ -79,12 +78,13 @@ const Navbar = () => {
                       className="dropdown-list"
                       onMouseLeave={() => handleServiceCLick()}
                     >
-                      <Link to={item.path}>{item.title}</Link>
-                      <MdKeyboardArrowDown
-                        size={25}
-                        className="arrowDown"
+                      <Link
+                        to={item.path}
                         onMouseEnter={() => handleServiceCLick()}
-                      />
+                      >
+                        {item.title}
+                      </Link>
+
                       {serviceDropdown && <ServiceDropdown />}
                     </li>
                   );
@@ -97,12 +97,13 @@ const Navbar = () => {
                       className="dropdown-list"
                       onMouseLeave={() => handleApplicationsCLick()}
                     >
-                      <Link to={item.path}>{item.title}</Link>
-                      <MdKeyboardArrowDown
-                        size={25}
-                        className="arrowDown"
+                      <Link
+                        to={item.path}
                         onMouseEnter={() => handleApplicationsCLick()}
-                      />
+                      >
+                        {item.title}
+                      </Link>
+
                       {applicationsDropdown && <ApplicationDropdown />}
                     </li>
                   );

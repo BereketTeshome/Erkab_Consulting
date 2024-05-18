@@ -40,7 +40,7 @@ const Footer = () => {
         </li>
         <li>
           <a
-            href="https://www.linkedin.com/in/bereket-teshome-1345a0246"
+            href="https://www.linkedin.com/in/eyosyas-dires-611b8320b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             target="_blank"
             className="social-icon"
           >
