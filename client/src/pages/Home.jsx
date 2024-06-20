@@ -48,12 +48,12 @@ export default function Home() {
   }, []);
   return (
     <div className="home">
-      <div className="animation" data-aos="zoom-in">
+      <div className="animation YT-bg" data-aos="zoom-in">
         <ReactPlayer
           url={`https://www.youtube.com/watch?v=${videoId}`}
           controls={true}
           width="100%"
-          height="500px"
+          height="470px"
         />
       </div>
 

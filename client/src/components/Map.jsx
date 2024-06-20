@@ -16,8 +16,8 @@ const Map = () => {
       zoom={18}
       center={position}
       scrollWheelZoom={false}
+      className="map-container"
       style={{
-        height: "80vh",
         width: "100%",
         zIndex: 0,
       }}

@@ -153,6 +153,11 @@ body {
   left: -75px;
 }
 
+.YT-bg {
+  margin-top: 25px;
+  background: #555;
+}
+
 .overview {
   padding: 6% 10%;
   color: rgb(59, 54, 54);
@@ -194,7 +199,7 @@ body {
 
 .overview_p {
   background-image: url("./transparent_bg.png");
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-clip: content-box;
   backface-visibility: 10%;
@@ -406,6 +411,9 @@ body {
   border-radius: 10px;
   transform: translateY(-70px);
 }
+.map-container {
+  height: 70vh;
+}
 .img img {
   object-fit: fill;
   width: 100%;
@@ -450,11 +458,7 @@ body {
 .achievements div {
   text-align: center;
 }
-.readMore-btn {
-  border: none;
-  color: #0168b8;
-  cursor: pointer;
-}
+
 .achievements img {
   width: 60px;
   height: 60px;
@@ -962,6 +966,11 @@ textarea {
   border-radius: 10px;
   box-shadow: 1px 1px 5px -1px black;
 }
+.readMore-btn {
+  border: none;
+  color: #0168b8;
+  cursor: pointer;
+}
 
 /* partners page */
 .partners {
@@ -1192,11 +1201,20 @@ footer .wave#wave4 {
 }
 
 @media screen and (max-width: 750px) {
+  .navbar {
+    height: 55px;
+  }
+  .logo {
+    width: 80px;
+  }
+  .vision-container div {
+    margin-top: 25px;
+  }
   .nav-links ul {
     display: flex;
     flex-direction: column;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(40px);
     box-shadow: 0 0 4px -1px;
     position: absolute;
     top: 71px;
@@ -1204,6 +1222,11 @@ footer .wave#wave4 {
     text-align: center;
     gap: 0;
   }
+
+  .map-container {
+    height: 50vh;
+  }
+
   .dropdown-list {
     justify-content: center;
     line-height: 11px;

@@ -62,6 +62,7 @@ const Navbar = () => {
                       <Link
                         to={item.path}
                         onMouseEnter={() => handleAboutCLick()}
+                        onClick={!toggle}
                       >
                         {item.title}
                       </Link>
@@ -81,6 +82,7 @@ const Navbar = () => {
                       <Link
                         to={item.path}
                         onMouseEnter={() => handleServiceCLick()}
+                        onClick={!toggle}
                       >
                         {item.title}
                       </Link>
@@ -100,6 +102,7 @@ const Navbar = () => {
                       <Link
                         to={item.path}
                         onMouseEnter={() => handleApplicationsCLick()}
+                        onClick={!toggle}
                       >
                         {item.title}
                       </Link>
@@ -111,7 +114,9 @@ const Navbar = () => {
 
                 return (
                   <li key={item.id} className="dropdown-list">
-                    <Link to={item.path}>{item.title}</Link>
+                    <Link onClick={!toggle} to={item.path}>
+                      {item.title}
+                    </Link>
                   </li>
                 );
               })}

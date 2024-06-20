@@ -153,7 +153,7 @@ const Overview = () => {
           - Enabled 50 MSMEs to be created
           <br />
           <br />
-          - Facilitated and enabled 103 MSMEs to extend their business
+          - Facilitated and enabled 103 MSMEs to extend their business.
           <br />
           <br />
         </p>
