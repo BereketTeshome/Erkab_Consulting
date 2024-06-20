@@ -188,12 +188,12 @@ export default function Home() {
           <h1>Visit Us</h1>
           <span className="underline"></span>
 
-          <p className="loc-left-p">Addis Ababa 22,Golagol Office No: 1113</p>
+          <p className="loc-left-p">Addis Ababa 22, Golagol Office No: 1113</p>
 
           <h3>Opening Hours:</h3>
           <div className="opening-hours">
             <p>MON - SAT</p>
-            <h4>02:00 - 12:00 LT</h4>
+            <h4>2:00 - 12:00 LT</h4>
           </div>
 
           <div className="opening-hours">
