@@ -1,12 +1,8 @@
-# Real Estate Website
+# Erkab Consultancy
+Erkab is a professional consulting firm established in 2021 G.C. the shareholders have a more than 13 years of profound consulting experience.
 
-Dream-Home is a real-estate website with comprehensive platform designed to help users find their dream properties.
-It offers a user-friendly interface and a wide range of features to make the property search process efficient and enjoyable.
-The website is built using the MERN stack (MongoDB, Express.js, React.js, and Node.js), ensuring a modern and intuitive user experience.
+## Features of the website
+- Application forms
+- Youtube integration
+- News posting
 
-## Features
-
-- Property Search
-- Saved Properties
-- Contact Forms
-- User Authentication and Authorization.
